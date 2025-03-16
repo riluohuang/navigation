@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Awesome Links</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             font-family: sans-serif;
             margin: 0;
+            background-color: #f9f9f9;
             display: flex;
             min-height: 100vh;
-            background-color: #f4f5f7;
+            color: #333;
         }
 
-        aside {
+        #sidebar {
             width: 200px;
             background-color: #fff;
             padding: 20px;
@@ -23,7 +26,7 @@
             flex-direction: column;
         }
 
-        aside h2 {
+        #sidebar h2 {
             margin-top: 0;
             font-size: 1.2em;
             color: #555;
@@ -32,22 +35,22 @@
             align-items: center;
         }
 
-        aside h2 i {
+        #sidebar h2 i {
             margin-right: 8px;
             color: #007bff;
         }
 
-        aside ul {
+        #sidebar ul {
             list-style: none;
             padding: 0;
             margin: 0;
         }
 
-        aside ul li {
+        #sidebar ul li {
             margin-bottom: 10px;
         }
 
-        aside ul li a {
+        #sidebar ul li a {
             display: block;
             text-decoration: none;
             color: #333;
@@ -56,11 +59,11 @@
             transition: background-color 0.2s ease;
         }
 
-        aside ul li a:hover {
+        #sidebar ul li a:hover {
             background-color: #e9ecef;
         }
 
-        main {
+        .main-content {
             flex-grow: 1;
             padding: 30px;
         }
@@ -73,7 +76,7 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
         }
 
-        .taxonomy-container h2 {
+        .taxonomy-title {
             display: flex;
             align-items: center;
             margin-top: 0;
@@ -84,7 +87,7 @@
             padding-bottom: 10px;
         }
 
-        .taxonomy-container h2 i {
+        .taxonomy-title i {
             margin-right: 10px;
             font-size: 1.2em;
             color: #007bff;
@@ -94,7 +97,7 @@
             list-style: none;
             padding: 0;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 15px;
         }
 
@@ -113,7 +116,7 @@
 
         .link-list li a .link-title {
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             display: flex;
             align-items: center;
         }
@@ -131,43 +134,62 @@
         }
 
         .term-container {
-            margin-bottom: 15px;
+            margin-top: 20px;
+            padding-left: 15px;
+            border-left: 3px solid #007bff;
         }
 
         .term-title {
             font-weight: bold;
             color: #555;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         .term-links {
             list-style: none;
             padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
         }
 
         .term-links li {
-            margin-bottom: 8px;
+            background-color: #fff;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            padding: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
         }
 
         .term-links li a {
             text-decoration: none;
             color: #333;
             display: block;
-            padding: 10px;
-            border-radius: 5px;
-            background-color: #fff;
-            border: 1px solid #eee;
-            transition: background-color 0.2s ease;
         }
 
-        .term-links li a:hover {
-            background-color: #f0f0f0;
+        .term-links li a .link-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .term-links li a .link-title img {
+            width: 18px;
+            height: 18px;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        .term-links li a .link-description {
+            color: #777;
+            font-size: 0.85em;
         }
     </style>
 </head>
 <body>
 
-    <aside>
+    <div id="sidebar">
         <h2><i class="fa-star"></i> 常用推荐</h2>
         <ul>
             <li><a href="#常用推荐">常用推荐</a></li>
@@ -196,11 +218,14 @@
             <li><a href="#搜索网站（找不到干脆换磁力吧）">搜索网站</a></li>
             <li><a href="#字幕网站">字幕网站</a></li>
         </ul>
-    </aside>
+    </div>
 
-    <main>
+    <div class="main-content">
         <section id="常用推荐" class="taxonomy-container">
-            <h2><i class="fa-star"></i> 常用推荐</h2>
+            <div class="taxonomy-title">
+                <i class="fa-star"></i>
+                <h2>常用推荐</h2>
+            </div>
             <ul class="link-list">
                 <li>
                     <a href="https://www.producthunt.com/" target="_blank">
@@ -224,10 +249,13 @@
         </section>
 
         <section id="工作效率" class="taxonomy-container">
-            <h2><i class="fa-regular fa-lightbulb"></i> 工作效率</h2>
+            <div class="taxonomy-title">
+                <i class="fa-regular fa-lightbulb"></i>
+                <h2>工作效率</h2>
+            </div>
             <div id="办公区" class="term-container">
                 <h3 class="term-title">办公区</h3>
-                <ul class="link-list">
+                <ul class="term-links">
                     <li>
                         <a href="https://abg.baidu.com/" target="_blank">
                             <span class="link-title"><img src="" alt="百度爱办公 Logo"> 百度爱办公</span>
@@ -257,7 +285,7 @@
 
             <div id="AI区" class="term-container">
                 <h3 class="term-title">AI区</h3>
-                <ul class="link-list">
+                <ul class="term-links">
                     <li>
                         <a href="https://gpt4o.so/app" target="_blank">
                             <span class="link-title"><img src="" alt="GPT 4o/mini免费用 Logo"> GPT 4o/mini免费用</span>
@@ -299,10 +327,13 @@
         </section>
 
         <section id="电脑工具" class="taxonomy-container">
-            <h2><i class="fa-thumbs-up"></i> 电脑工具</h2>
+            <div class="taxonomy-title">
+                <i class="fa-thumbs-up"></i>
+                <h2>电脑工具</h2>
+            </div>
             <div id="装机工具" class="term-container">
                 <h3 class="term-title">装机工具</h3>
-                <ul class="link-list">
+                <ul class="term-links">
                     <li>
                         <a href="https://www.bilibili.com/video/BV1DJ411D79y" target="_blank">
                             <span class="link-title"><img src="" alt="超详细WIN10系统安装教程－ 硬件茶谈 Logo"> 超详细WIN10系统安装教程－ 硬件茶谈</span>
@@ -326,7 +357,7 @@
 
             <div id="系统优化" class="term-container">
                 <h3 class="term-title">系统优化</h3>
-                <ul class="link-list">
+                <ul class="term-links">
                     <li>
                         <a href="https://www.ghxi.com/wisecare365.html" target="_blank">
                             <span class="link-title"><img src="" alt="wisecare365 Logo"> wisecare365</span>
@@ -350,10 +381,13 @@
         </section>
 
         <section id="BT磁力搜索与下载" class="taxonomy-container">
-            <h2><i class="fa-thumbs-up"></i> BT磁力搜索与下载</h2>
+            <div class="taxonomy-title">
+                <i class="fa-thumbs-up"></i>
+                <h2>BT磁力搜索与下载</h2>
+            </div>
             <div id="磁力搜索" class="term-container">
                 <h3 class="term-title">磁力搜索</h3>
-                <ul class="link-list">
+                <ul class="term-links">
                     <li>
                         <a href="https://bt.pyth.onl/" target="_blank">
                             <span class="link-title"><img src="" alt="Yiove 磁力搜索 Logo"> Yiove 磁力搜索</span>
@@ -371,7 +405,7 @@
 
             <div id="磁力下载" class="term-container">
                 <h3 class="term-title">磁力下载</h3>
-                <ul class="link-list">
+                <ul class="term-links">
                     <li>
                         <a href="https://wwx.lanzouo.com/b073c7g4f" target="_blank">
                             <span class="link-title"><img src="" alt="比特彗星 BitComet（内置热门tracker版) Logo"> 比特彗星 BitComet（内置热门tracker版)</span>
@@ -389,7 +423,10 @@
         </section>
 
         <section id="思绪飞扬" class="taxonomy-container">
-            <h2><i class="fa-star"></i> 思绪飞扬</h2>
+            <div class="taxonomy-title">
+                <i class="fa-star"></i>
+                <h2>思绪飞扬</h2>
+            </div>
             <ul class="link-list">
                 <li>
                     <a href="https://web.archive.org" target="_blank">
@@ -437,74 +474,76 @@
                     <a href="https://aidn.jp/mikutap/" target="_blank">
                         <span class="link-title">Mikutap</span>
                         <span class="link-description">一个好玩又解压的网站，进去之后随便点击键盘上A—Z按键和鼠标，就能发出不同的声音。只要你手速够快，就能让听到一段好听的音乐，而且是初音未来的那种感觉。</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="影视区" class="taxonomy-container">
+        <div class="taxonomy-title">
+            <i class="fa-thumbs-up"></i>
+            <h2>影视区</h2>
+        </div>
+        <div id="搜索网站（找不到干脆换磁力吧）" class="term-container">
+            <h3 class="term-title">搜索网站（找不到干脆换磁力吧）</h3>
+            <ul class="term-links">
+                <li>
+                    <a href="https://a.sousou.pro" target="_blank">
+                        <span class="link-title"><img src="" alt="网盘小站 Logo"> 网盘小站</span>
+                        <span class="link-description">3块的注册费包回本的！</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.4khdr.cn/" target="_blank">
+                        <span class="link-title"><img src="" alt="4K HDR世界 Logo"> 4K HDR世界</span>
+                        <span class="link-description">这个4K真不是1080P，画质控无脑冲</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.wo4k.com/" target="_blank">
+                        <span class="link-title"><img src="" alt="顶级4K Logo"> 顶级4K</span>
+                        <span class="link-description">画质顶不顶不知道，但至少名字够顶</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.piaohua.com/" target="_blank">
+                        <span class="link-title"><img src="" alt="飘花电影网 Logo"> 飘花电影网</span>
+                        <span class="link-description"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.mini4k.org/" target="_blank">
+                        <span class="link-title"><img src="" alt="MINI4K迷客电影 Logo"> MINI4K迷客电影</span>
+                        <span class="link-description"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.bugutv.org/" target="_blank">
+                        <span class="link-title"><img src="" alt="布谷TV Logo"> 布谷TV</span>
+                        <span class="link-description"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.yinfans.me/" target="_blank">
+                        <span class="link-title"><img src="" alt="音范丝精选 Logo"> 音范丝精选</span>
+                        <span class="link-description"></span>
                     </a>
                 </li>
             </ul>
-        </section>
-
-        <section id="影视区" class="taxonomy-container">
-            <h2><i class="fa-thumbs-up"></i> 影视区</h2>
-            <div id="搜索网站（找不到干脆换磁力吧）" class="term-container">
-                <h3 class="term-title">搜索网站（找不到干脆换磁力吧）</h3>
-                <ul class="link-list">
-                    <li>
-                        <a href="https://a.sousou.pro" target="_blank">
-                            <span class="link-title"><img src="" alt="网盘小站 Logo"> 网盘小站</span>
-                            <span class="link-description">3块的注册费包回本的！</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.4khdr.cn/" target="_blank">
-                            <span class="link-title"><img src="" alt="4K HDR世界 Logo"> 4K HDR世界</span>
-                            <span class="link-description">这个4K真不是1080P，画质控无脑冲</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.wo4k.com/" target="_blank">
-                            <span class="link-title"><img src="" alt="顶级4K Logo"> 顶级4K</span>
-                            <span class="link-description">画质顶不顶不知道，但至少名字够顶</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.piaohua.com/" target="_blank">
-                            <span class="link-title"><img src="" alt="飘花电影网 Logo"> 飘花电影网</span>
-                            <span class="link-description"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.mini4k.org/" target="_blank">
-                            <span class="link-title"><img src="" alt="MINI4K迷客电影 Logo"> MINI4K迷客电影</span>
-                            <span class="link-description"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.bugutv.org/" target="_blank">
-                            <span class="link-title"><img src="" alt="布谷TV Logo"> 布谷TV</span>
-                            <span class="link-description"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.yinfans.me/" target="_blank">
-                            <span class="link-title"><img src="" alt="音范丝精选 Logo"> 音范丝精选</span>
-                            <span class="link-description"></span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div id="字幕网站" class="term-container">
-                <h3 class="term-title">字幕网站</h3>
-                <ul class="link-list">
-                    <li>
-                        <a href="https://subhd.tv/" target="_blank">
-                            <span class="link-title"><img src="" alt="SubHD Logo"> SubHD</span>
-                            <span class="link-description">你还有选择吗？</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-    </main>
+        </div>
+        <div id="字幕网站" class="term-container">
+            <h3 class="term-title">字幕网站</h3>
+            <ul class="term-links">
+                <li>
+                    <a href="https://subhd.tv/" target="_blank">
+                        <span class="link-title"><img src="" alt="SubHD Logo"> SubHD</span>
+                        <span class="link-description">你还有选择吗？</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
 
 </body>
 </html>
